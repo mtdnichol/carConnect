@@ -1,0 +1,10 @@
+400 - Bad request
+500 - Server error
+200 - OK
+401 - Not Authorized
+404 - Not Found
+
+PUT - Edit
+POST - Create
+GET - Get
+DELETE - Delete

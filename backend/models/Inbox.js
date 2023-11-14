@@ -6,6 +6,10 @@ const InboxSchema = new mongoose.Schema({
         ref: 'user',
         required: true
     },
+    type: {
+        type: String,
+        required: true
+    },
     header: {
         type: String,
         required: true

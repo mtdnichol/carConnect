@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
-const EventSchema = new mongoose.Schema({
-    createdBy: {
+const GroupCommentSchema = new mongoose.Schema({
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user',
         required: true
@@ -11,20 +11,17 @@ const EventSchema = new mongoose.Schema({
         ref: 'group',
         required: true
     },
-    name: {
-        type: String,
+    post: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'groupPost',
         required: true
     },
-    description: {
-        type: String
+    text: {
+        type: String,
     },
-    location: {
-        type: String
-    },
-    eventDate: {
-      type: Date,
-      required: true
-    },
+    photos: [{
+        type: String,
+    }],
     likes: [{
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -34,7 +31,7 @@ const EventSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now()
-    },
+    }
 })
 
-module.exports = _event = mongoose.model('event', EventSchema)
+module.exports = _GroupComment = mongoose.model('groupComment', GroupCommentSchema)

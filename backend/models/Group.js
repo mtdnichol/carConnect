@@ -11,7 +11,7 @@ const GroupSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    private: {
+    isPrivate: {
         type: Boolean,
         required: true
     },

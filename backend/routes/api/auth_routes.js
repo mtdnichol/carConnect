@@ -39,7 +39,7 @@ router.post('/', [
 
     try {
         // Check if the user exists
-        let user = await User.findOne({ email })
+        let user = await User.findOne({ email });
 
         // If a user exists, respond with bad request
         if (!user) {
@@ -60,7 +60,7 @@ router.post('/', [
         // Return JWT
         const payload = {
             user: {
-                id: user._id
+                id: user.id
             }
         }
 
